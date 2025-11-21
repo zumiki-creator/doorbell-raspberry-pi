@@ -1,7 +1,6 @@
 #!/bin/bash
 echo "raspberry PI GPIO and Arduino-iot-cloud"
 
-
 echo "Updating system and installing dependencies... ============================================================="
 sudo apt -y update
 sudo apt -y upgrade
@@ -9,7 +8,6 @@ sudo apt -y install python3-full
 sudo apt -y install liblgpio-dev
 sudo apt -y install swig
 sudo apt -y install git
-
 
 #git repo clone
 echo "Cloning repository... ============================================================"
