@@ -1,7 +1,8 @@
 #!/bin/bash
 echo "raspberry PI GPIO and Arduino-iot-cloud"
 
-echo "Updating system and installing dependencies..."
+
+echo "Updating system and installing dependencies... ============================================================="
 sudo apt -y update
 sudo apt -y upgrade
 sudo apt -y install python3-full
@@ -11,24 +12,24 @@ sudo apt -y install git
 
 
 #git repo clone
-echo "Cloning repository..."
+echo "Cloning repository... ============================================================"
 git config --global user.name "app"
 git config --global user.email "app@localhost.com"
-git clone https://github.com/zumiki-creator/doorbell-raspberry-pi.git /home/iot/app
+git clone https://github.com/zumiki-creator/doorbell-raspberry-pi.git ~/app
 
 #ubuntu only
-echo "Installing Ubuntu specific dependencies..."
+echo "Installing Ubuntu specific dependencies... ============================================================"
 sudo apt-get install crossbuild-essential-arm64
 sudo apt-get install python3-dev
 
 #setup python environment
-echo "Setting up Python environment..."
+echo "Setting up Python environment... ============================================================" 
 cd /home/iot/app
 python3 -m venv venv
 source venv/bin/activate
 
 # upgrade pip and install required python packages
-echo "Installing Python packages..."
+echo "Installing Python packages... ============================================================"
 
 pip install --upgrade pip setuptools wheel
 
@@ -38,7 +39,7 @@ pip install RPi-lgpio
 pip install arduino-iot-cloud
 
 # create app service   
-echo "Setting up application service..."
+echo "Setting up application service... ============================================================"
 chmod +x /home/iot/app/run-app.sh
 sudo cp /home/iot/app/bootstrap/doorbell.service /etc/systemd/system/doorbell.service
 sudo systemctl enable doorbell.service
