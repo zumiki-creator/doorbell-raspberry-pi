@@ -1,0 +1,12 @@
+[Unit]
+Description=Door Bell Service Configuration File
+After=network.target
+
+[Service]
+Type=simple
+ExecStart=/home/iot/app/run-app.sh
+Restart=always
+RestartSec=5s
+
+[Install]
+WantedBy=multi-user.target
