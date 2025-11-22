@@ -1,5 +1,5 @@
 #!/bin/bash
 echo "starting doorbell..."
-source /home/iot/app/venv/bin/activate
-python /home/iot/app/app.py
+source /home/doorbell/app/venv/bin/activate
+python /home/doorbell/app/app.py
 echo "Done"
