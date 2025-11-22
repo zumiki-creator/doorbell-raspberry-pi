@@ -17,8 +17,8 @@ git clone https://github.com/zumiki-creator/doorbell-raspberry-pi.git ~/app
 
 #ubuntu only
 echo "Installing Ubuntu specific dependencies... ============================================================"
-sudo apt-get install crossbuild-essential-arm64
-sudo apt-get install python3-dev
+sudo apt-get -y install crossbuild-essential-arm64
+sudo apt-get -y install python3-dev
 
 #setup python environment
 echo "Setting up Python environment... ============================================================" 
