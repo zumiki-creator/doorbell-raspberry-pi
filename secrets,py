@@ -1,0 +1,4 @@
+# Get credentials from Arduino IoT Cloud
+
+DEVICE_ID = "<replace with your credentilas>"
+SECRET_KEY = "<replace with your credentilas>"
