@@ -42,7 +42,7 @@ pip install arduino-iot-cloud
 # create app service   
 echo "Setting up application service... ============================================================"
 chmod +x ~/app/run-app.sh
-sudo cp ~/app/bootstrap/doorbell.service /etc/systemd/system/doorbell.service
+sudo cp ~/app/doorbell.service /etc/systemd/system/doorbell.service
 sudo systemctl enable doorbell.service
 sudo systemctl start doorbell.service 
 
