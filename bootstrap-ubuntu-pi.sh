@@ -22,7 +22,7 @@ sudo apt-get -y install python3-dev
 
 #setup python environment
 echo "Setting up Python environment... ============================================================" 
-cd /home/iot/app
+cd ~/app
 python3 -m venv venv
 source venv/bin/activate
 
@@ -38,8 +38,8 @@ pip install arduino-iot-cloud
 
 # create app service   
 echo "Setting up application service... ============================================================"
-chmod +x /home/iot/app/run-app.sh
-sudo cp /home/iot/app/bootstrap/doorbell.service /etc/systemd/system/doorbell.service
+chmod +x ~/app/run-app.sh
+sudo cp ~/app/bootstrap/doorbell.service /etc/systemd/system/doorbell.service
 sudo systemctl enable doorbell.service
 sudo systemctl start doorbell.service 
 
