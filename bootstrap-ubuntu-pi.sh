@@ -1,4 +1,7 @@
 #!/bin/bash
+# Exit immediately if any command fails
+set -e
+
 echo "raspberry PI GPIO and Arduino-iot-cloud"
 
 echo "Updating system and installing dependencies... ============================================================="
