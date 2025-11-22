@@ -4,7 +4,7 @@ After=network.target
 
 [Service]
 Type=simple
-ExecStart=/home/iot/app/run-app.sh
+ExecStart=/home/doorbell/app/run-app.sh
 Restart=always
 RestartSec=5s
 
