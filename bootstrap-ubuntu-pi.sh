@@ -39,6 +39,11 @@ pip install RPi-GPIO
 pip install RPi-lgpio
 pip install arduino-iot-cloud
 
+#yolo
+pip install ultralytics
+pip install opencv-python-headless
+
+
 # create app service   
 echo "Setting up application service... ============================================================"
 chmod +x ~/app/run-app.sh
